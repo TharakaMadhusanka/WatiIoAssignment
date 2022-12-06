@@ -1,6 +1,6 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using WatiIo_API.Models;
+using WatiO.Shared;
 
 namespace WatiIo_API.Controllers
 {
@@ -10,9 +10,10 @@ namespace WatiIo_API.Controllers
     {
         [Route("add")]
         [HttpPost]
-        public async Task<int> Sum(NumbersModel numbersModel)
+        public async Task<int> Sum(Models.NumbersModel numbersModel)
         {
-            return numbersModel.Number1 + numbersModel.Number2;
+            var sharedClass = new SharedClass();
+            return sharedClass.Sum(new WatiO.Shared.NumbersModel() { Number1 = numbersModel.Number1, Number2 = numbersModel.Number2 });
 ;       }
     }
 }
