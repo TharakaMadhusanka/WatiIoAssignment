@@ -9,6 +9,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestSuite", "TestSuite\Test
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared", "Shared\Shared.csproj", "{FA78EC06-C703-47AA-BEC7-6B3DC0EC3905}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WatiIo_FE", "WatiIo_FE", "{CAA213F5-9406-467B-932B-4D669F132693}"
+	ProjectSection(SolutionItems) = preProject
+		Index.html = Index.html
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <script>
+        var http = new XMLHttpRequest();
+        var url = 'https://localhost:7250/api/sum/add';
+        var params = { "number1": 1, "number" : 2 };
+        http.open('POST', url, true);
+
+        //Send the proper header information along with the request
+        http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+
+        http.onreadystatechange = function () {//Call a function when the state changes.
+            if (http.readyState == 4 && http.status == 200) {
+                alert(http.responseText);
+            }
+        }
+        http.send(params);
+    </script>
+</body>
+</html>
